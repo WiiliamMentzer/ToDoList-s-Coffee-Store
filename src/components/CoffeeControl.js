@@ -15,16 +15,18 @@ class CoffeeControl extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
   
   handleClick = () => {
+    console.log("handleClick reached!");
     if (this.state.selectedCoffee != null) {
+      console.log("if reached!");
       this.setState ({
         formVisibleOnPage: false,
         selectedCoffee: null,
         editing: false
       });
     } else {
+      console.log("else reached!");
       this.setState(prevState => ({
         formVisibleOnPage: !prevState.formVisibleOnPage,
       }));
@@ -41,6 +43,7 @@ class CoffeeControl extends React.Component {
   }
 
   handleChangingSelectedCoffee = (id) => {
+    console.log("handleChange reached!");
     const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
     this.setState({selectedCoffee: selectedCoffee});
   }
@@ -51,6 +54,7 @@ class CoffeeControl extends React.Component {
   }
 
   handleEditingCoffeeInList = (coffeeToEdit) => {
+    console.log("handleEditingCoffee reached!");
     const editedMainCoffeeList = this.state.mainCoffeeList
       .filter (coffee => coffee.id !== this.state.selectedCoffee.id)
       .concat(coffeeToEdit);
@@ -75,17 +79,21 @@ class CoffeeControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
+      console.log("Edit reached?");
       currentlyVisibleState = <EditCoffeeForm coffee= {this.state.selectedCoffee} onEditCoffee= {this.handleEditingCoffeeInList} />
       buttonText="Return to Coffee List";
     } else if (this.state.selectedCoffee != null) {
+      console.log("CoffeeDetail reached?");
       currentlyVisibleState = <CoffeeDetail
         coffee={this.state.selectedCoffee}
         onClickingDelete={this.state.handleDeletingCoffee}
         onClickingEdit={this.state.handleEditClock} />
-    } else if (this.state.formVisibleonPage) {
+    } else if (this.state.formVisibleOnPage) {
+      console.log("NewCoffeeForm reached?");
       currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />  // show NewCoffeeForm
       buttonText = "return to coffee form";  // our new button
     } else {
+      console.log("coffeeList reached?");
       currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection={this.handleChangingSelectedCoffee} />
       buttonText = "Add Coffee";  // and this is our button
     }

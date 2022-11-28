@@ -8,9 +8,11 @@ function NewCoffeeForm(props) {
   function handleNewCoffeeFormSubmission(event) {
     event.preventDefault();
     props.onNewCoffeeCreation({
-      names: event.target.names.value,
-      location: event.target.location.value,
-      issue: event.target.issue.value,
+      name: event.target.name.value,
+      price: event.target.price.value,
+      origin: event.target.origin.value,
+      roast: event.target.roast.value,
+      ammount: "130",
       id: v4()
     });
   }
@@ -19,7 +21,7 @@ function NewCoffeeForm(props) {
     <React.Fragment>
       <CoffeeForm
         formSubmissionHandler={handleNewCoffeeFormSubmission}
-        buttonText="Help!" />
+        buttonText="Add New Coffee" />
     </React.Fragment>
   );
 }

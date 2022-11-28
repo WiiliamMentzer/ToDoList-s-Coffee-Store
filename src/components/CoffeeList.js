@@ -2,6 +2,7 @@ import React from "react";
 import Coffee from './Coffee';
 import PropTypes from 'prop-types';
 
+
 function CoffeeList(props) {
   return (
     <React.Fragment>
@@ -12,7 +13,8 @@ function CoffeeList(props) {
         name= {coffee.name}
         price= {coffee.price}
         roast= {coffee.roast} 
-        origin= {coffee.origin} /> 
+        origin= {coffee.origin}
+        ammount= {coffee.ammount} /> 
       )}
     </React.Fragment>
   );
