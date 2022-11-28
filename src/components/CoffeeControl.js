@@ -1,5 +1,8 @@
 import React from "react";
-import Coffee from "./Coffee";
+import NewCoffeeForm from './NewCoffeeForm';
+import CoffeeList from './CoffeeList';
+import CoffeeDetail from './CoffeeDetails';
+import EditCoffeeForm from './EditCoffeeForm';
 
 class CoffeeControl extends React.Component {
   constructor(props) {
