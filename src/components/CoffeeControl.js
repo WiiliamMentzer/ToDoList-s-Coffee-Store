@@ -18,10 +18,10 @@ class CoffeeControl extends React.Component {
 
   
   handleClick = () => {
-    if (this.state.selectedTicket != null) {
+    if (this.state.selectedCoffee != null) {
       this.setState ({
         formVisibleOnPage: false,
-        selectedTicket: null,
+        selectedCoffee: null,
         editing: false
       });
     } else {
@@ -33,6 +33,7 @@ class CoffeeControl extends React.Component {
   
   handleAddingNewCoffeeToList = (newCoffee) => {
     const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffee);
+    console.log("handleAddNew reached!");
     this.setState({
       mainCoffeeList: newMainCoffeeList,
       formVisibleOnPage: false
@@ -62,6 +63,7 @@ class CoffeeControl extends React.Component {
 
   handleDeletingCoffee = (id) => {
     const newMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== id);
+    console.log("handleDelete reached, COFFEE DELETED!");
     this.setState({
       mainCoffeeList: newMainCoffeeList,
       selectedCoffee: null

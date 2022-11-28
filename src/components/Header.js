@@ -1,10 +1,10 @@
 import React from 'react';
-import ticketsImage from './../img/server-icon.png';
+import carlImage from './../img/server-icon.png';
 
 function Header(){
   return (
     <React.Fragment>
-      <img src={ticketsImage} alt="CARL" />
+      <img src={carlImage} alt="CARL" />
       <h1>ToDo's Coffee House</h1>
     </React.Fragment>
   );
