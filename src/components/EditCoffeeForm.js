@@ -3,11 +3,11 @@ import CoffeeForm from "./CoffeeForm";
 import PropTypes from 'prop-types';
 
 function EditCoffeeForm (props) {
-  const {ticket} = props;
+  const {coffee} = props;
 
   function handleEditCoffeeFormSubmission(event) {
     event.preventDefault();
-    props.onEditCoffee({name: event.target.name.value, price: event.target.price.value, roast: event.target.roast.value, origin: event.target.origin.value})
+    props.onEditCoffee({name: event.target.name.value, price: event.target.price.value, roast: event.target.roast.value, origin: event.target.origin.value, id:coffee.id})
   }
 
   return (
