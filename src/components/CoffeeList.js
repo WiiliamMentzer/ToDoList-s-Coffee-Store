@@ -15,7 +15,8 @@ function CoffeeList(props) {
         roast= {coffee.roast} 
         origin= {coffee.origin}
         ammount= {coffee.ammount}
-        id= {coffee.id} /> 
+        id= {coffee.id}
+        key= {coffee.id} /> 
       )}
     </React.Fragment>
   );
