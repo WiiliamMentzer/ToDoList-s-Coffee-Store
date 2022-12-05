@@ -22,7 +22,6 @@
 
 ## Diagram
 <img src="./src/img/ToDosCoffeeHouse.drawio.png' alt='diagram"/>
-  ![alt text](https://drive.google.com/file/d/1477uDogarYRcipwHRK8Sq4nQ8psxEnSC/view?usp=sharing)
 
 # Getting Started with ToDo's Coffee House
 
