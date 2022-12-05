@@ -21,7 +21,7 @@
   * HTML
 
 ## Diagram
-<img src="./src/img/ToDos-CoffeeHouse.drawio.png' alt='diagram"/>
+<img src="./src/img/ToDosCoffeeHouse.drawio.png' alt='diagram"/>
 
 # Getting Started with ToDo's Coffee House
 
