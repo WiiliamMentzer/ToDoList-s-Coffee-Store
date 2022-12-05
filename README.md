@@ -20,6 +20,9 @@
 	* JavaScript
   * HTML
 
+## Diagram
+<img src="./src/img/ToDos-CoffeeHouse.drawio.png' alt='diagram"/>
+
 # Getting Started with ToDo's Coffee House
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
