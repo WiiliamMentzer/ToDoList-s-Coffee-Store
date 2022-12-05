@@ -5,11 +5,11 @@ function Coffee(props) {
   return (
     <React.Fragment>
       <div onClick = {() => props.whenCoffeeClicked(props.id)}>
-        <h2>{props.name}</h2>
-        <h3>{props.price}</h3>
-        <p><em>{props.roast}</em></p>
-        <p><em>{props.origin}</em></p>
-        <p><em>{props.ammount}</em></p>
+        <h2>Name: {props.name}</h2>
+        <h3>Price: ${props.price} /lb.</h3>
+        <p><em>Roast: {props.roast}</em></p>
+        <p><em>Origin: {props.origin}</em></p>
+        <p><em>Ammount Left: {props.ammount} lbs.</em></p>
       </div> 
       {/* <button>+</button>
       <button>-</button> */}
