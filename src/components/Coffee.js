@@ -11,8 +11,8 @@ function Coffee(props) {
         <p><em>{props.origin}</em></p>
         <p><em>{props.ammount}</em></p>
       </div> 
-      <button>+</button>
-      <button>-</button>
+      {/* <button>+</button>
+      <button>-</button> */}
       <hr/>
     </React.Fragment>
   );

@@ -53,6 +53,13 @@ class CoffeeControl extends React.Component {
     this.setState({editing: true});
   }
 
+  handleCoffeeBuy = (coffee) => {
+    coffee.ammount -= 1;
+    this.setState({
+      selectedCoffee: coffee
+    });
+  }
+
   handleEditingCoffeeInList = (coffeeToEdit) => {
     console.log("handleEditingCoffee reached!");
     const editedMainCoffeeList = this.state.mainCoffeeList
@@ -87,7 +94,9 @@ class CoffeeControl extends React.Component {
       currentlyVisibleState = <CoffeeDetail
         coffee={this.state.selectedCoffee}
         onClickingDelete={this.handleDeletingCoffee}
-        onClickingEdit={this.handleEditClick} />
+        onClickingEdit={this.handleEditClick}
+        onClickingRemoveBag={this.handleCoffeeBuy} />
+        buttonText="Return to Coffee List";
     } else if (this.state.formVisibleOnPage) {
       console.log("NewCoffeeForm reached?");
       currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />  // show NewCoffeeForm
