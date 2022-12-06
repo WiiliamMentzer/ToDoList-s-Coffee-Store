@@ -51,12 +51,8 @@ class CoffeeControl extends React.Component {
 
     if (coffee.ammount > 0){
       coffee.ammount -= 1;
-      coffee.ammount.toString();
     } else if (coffee.ammount === 0){
       return;
-      // this.setState({
-      //   ammout: "0"
-      // })
     }
     this.setState({
       selectedCoffee: coffee

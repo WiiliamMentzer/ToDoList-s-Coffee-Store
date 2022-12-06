@@ -9,7 +9,7 @@ function Coffee(props) {
         <h3>Price: ${props.price} /lb.</h3>
         <p><em>Roast: {props.roast}</em></p>
         <p><em>Origin: {props.origin}</em></p>
-        <p><em>Ammount Left: {props.ammount.toString()} lbs.</em></p>
+        <p><em>Ammount Left: {props.ammount} lbs.</em></p>
       </div> 
       {/* <button>+</button>
       <button>-</button> */}
@@ -23,7 +23,7 @@ Coffee.propTypes = {
   roast: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  ammount: PropTypes.string.isRequired,
+  ammount: PropTypes.number.isRequired,
   id: PropTypes.string,
   whenCoffeeClicked: PropTypes.func
 };
